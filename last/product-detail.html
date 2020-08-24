@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.js"></script>
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css" />
+</head>
+
+<style>
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        margin: 0
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    img {
+        vertical-align: middle;
+
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        height: fit-content;
+        position: relative;
+        padding: 20px;
+        width: 25%;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        background-color: #f1f1f1;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 100%;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0%;
+        border-radius: 100%;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+
+
+    .prev:disabled,
+    prev[disabled],
+    .next:disabled,
+    next[disabled] {
+        background-color: grey;
+    }
+
+
+
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 0.5s;
+        animation-name: fade;
+        animation-duration: 0.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <p>Cimri.com</p>
+        <form class="search" action="/action_page.php">
+            <input type="text" placeholder="Binlerce mağaza arasında en ucuz fiyatı bulun!" name="search">
+            <button type="submit">ARA</button>
+        </form>
+        <div class="account">Hesabım <i class="large material-icons">expand_more</i>
+        </div>
+        <div class="parentOfHidden">
+            <ul class="hiddenOptions">
+                <li>Giriş Yap/Üye Ol</li>
+                <li>Hesabım</li>
+                <li>Favorilerim</li>
+                <li>Fiyat Alarmı</li>
+            </ul>
+        </div>
+        <div class="myBasket">
+            <a class="material-icons" href=myBasket.html> shopping_cart</a>
+            <div class="numOfProducts">0</div>
+        </div>
+    </div>
+    <div class="menu-wrapper">
+        <ul class="navigation">
+            <li class="navigation-item">
+                <span>Elektronik </span>
+                <div class="lines"></div>
+                <div class="categories-wrapper">
+                    <div class="mid-categories-wrapper">
+                        <ul class="mid-categories">
+                            <li>
+                                <span>Bilgisayar/Tablet</span>
+                                <div class="sub-categories-wrapper">
+                                    <ul class="sub-categories">
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Yazıcılar & Projeksiyon</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="navigation-item">
+                <span>Moda</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="middleMenu">
+        <div class="breadcrumb">
+            <span>
+                Anasayfa <i class="material-icons">chevron_right</i>
+            </span>
+
+        </div>
+        <div class="breadcrumb">
+            <span>
+                Elektronik <i class="material-icons">chevron_right</i>
+            </span>
+
+        </div>
+        <div class="breadcrumb">
+            <span>
+                Cep Telefonları <i class="material-icons">chevron_right</i>
+            </span>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src=photos/iPhone11-black(1).jpg style="width:400px">
+        </div>
+
+        <div class="mySlides fade">
+            <img src=photos/iPhone11-black(2).jpg style="width:400px">
+        </div>
+
+        <div class="mySlides fade">
+            <img src=photos/iPhone11-black(3).jpg style="width:400px">
+        </div>
+
+        <button class="prev" onclick="plusSlides(-1)" type="button">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)" type="button">&#10095;</button>
+    </div>
+
+    <br>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            console.log(n);
+            const slides = document.getElementsByClassName("mySlides");
+            const prev = document.querySelector('.prev');
+            const next = document.querySelector('.next');
+            if (n == slides.length) {
+                next.disabled = true;
+            }
+            else {
+                next.disabled = false;
+            }
+            if (n == 1) {
+                prev.disabled = true;
+            }
+            else {
+                prev.disabled = false;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "flex";
+        }
+    </script>
+
+</body>
+
+</html>

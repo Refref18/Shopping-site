@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.js"></script>
+    <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href=css/general.css />
+    <link rel="stylesheet" href=css/myBasket.css />
+</head>
+
+<body>
+    <div class="flex-container">
+        <p>Cimri.com</p>
+        <form class="search" action="/action_page.php">
+            <input type="text" placeholder="Binlerce mağaza arasında en ucuz fiyatı bulun!" name="search">
+            <button type="submit">ARA</button>
+        </form>
+        <div class="account">Hesabım <i class="large material-icons">expand_more</i>
+        </div>
+        <div class="parentOfHidden">
+            <ul class="hiddenOptions">
+                <li>Giriş Yap/Üye Ol</li>
+                <li>Hesabım</li>
+                <li>Favorilerim</li>
+                <li>Fiyat Alarmı</li>
+            </ul>
+        </div>
+        <div class="myBasket">
+            <i class="material-icons"> shopping_cart</i>
+            <div class="numOfProducts">0</div>
+        </div>
+    </div>
+    <div class="menu-wrapper">
+        <ul class="navigation">
+            <li class="navigation-item">
+                <span>Elektronik </span>
+                <div class="lines"></div>
+                <div class="categories-wrapper">
+                    <div class="mid-categories-wrapper">
+                        <ul class="mid-categories">
+                            <li>
+                                <span>Bilgisayar/Tablet</span>
+                                <div class="sub-categories-wrapper">
+                                    <ul class="sub-categories">
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                        <div class="eachtopic">
+                                            <h5 class="headers">Dizüstü Bilgisayar</h5>
+                                            <div>
+                                                <span class="items">Notebook</span>
+                                                <span class="items">Oyun Bilgisayarları</span>
+                                                <span class="items">İkisi bir arada</span>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Yazıcılar & Projeksiyon</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                            <li>
+                                <span>Telefon & Telefon Aksesuarları</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="navigation-item">
+                <span>Moda</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+            <li class="navigation-item">
+                <span>Oyun</span>
+                <div class="lines"></div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="theBasket">
+
+        <div class="bucketList">
+            <i class="material-icons"> shopping_cart</i>
+            <h2>
+                Alışveriş Sepetim
+            </h2>
+            <ul class="itemsInBasket">
+
+            </ul>
+        </div>
+
+        <div class="summary">
+            <h2>
+                Sipariş Özeti
+            </h2>
+            <div class="explanation">
+                <div class="quantity">
+                    Ürün Toplamı
+                </div>
+                <div class="totalPayment">
+                    <div>Ödenecek Tutar</div>
+                    <div class="howMuchToPay"> 7.449TL </div>
+                </div>
+                <a class="finish" href=completed.html>
+                    Alışverişi Tamamla
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/myBasket.js"></script>
+
+</body>
+
+</html>
